@@ -1,7 +1,9 @@
+import { HeaderRoot } from './components/HeaderRoot'
+
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <HeaderRoot />
     </>
   )
 }
