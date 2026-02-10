@@ -31,8 +31,29 @@ body {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: $xl;
+  max-width: $xxxl;
   padding: 0 20px;
+}
+
+.button {
+  border: none;
+  border-radius: calc(infinity * 1px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-black);
+    background-color: var(--color-white);
+  }
 }
 
 .header {
@@ -136,6 +157,71 @@ body {
     &:hover,
     &:focus-visible {
       opacity: 1;
+    }
+  }
+}
+
+.home-hero {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: $lg) {
+    margin-top: 64px;
+    min-height: 80dvh;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+
+    @media screen and (min-width: $lg) {
+      font-size: 30px;
+    }
+
+    @media screen and (min-width: $xxl) {
+      font-size: 48px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    display: flex;
+    width: calc(2 / 3 * 100%);
+  }
+
+  &__video {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $xl;
+
+    @media screen and (min-width: $lg) {
+      transform: translateY(20px);
+    }
+  }
+
+  &__button {
+    margin: 40px auto 20px;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-width: $lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--color-dark-100);
+
+    @media screen and (min-width: $lg) {
+      font-size: 20px;
     }
   }
 }
