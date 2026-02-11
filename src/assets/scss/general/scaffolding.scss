@@ -19,6 +19,11 @@
   --gradient-color: linear-gradient(to bottom right, #0894ff 0%, #c959dd 34%, #ff2e54 68%, #ff9004);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -26,6 +31,16 @@ body {
   color: var(--color-white);
   background-color: var(--color-black);
   scroll-behavior: smooth;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -82,7 +97,8 @@ body {
   }
 }
 
-.header-logo {
+.header-logo,
+.footer-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,6 +167,109 @@ body {
     justify-content: center;
     background-color: transparent;
     cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+    }
+  }
+}
+
+.footer {
+  padding: 20px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    color: var(--color-dark-100);
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $lg) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--color-dark-100);
+
+    @media screen and (min-width: $lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+    color: var(--color-dark-100);
+    opacity: 0.3;
+  }
+}
+
+.footer-navigation {
+  &__list {
+    margin: -4px -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+
+    @media screen and (min-width: $lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    margin: 4px 10px;
+
+    @media screen and (min-width: $lg) {
+      position: relative;
+      padding: 0 10px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: $lg) {
+      &::after {
+        content: '|';
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        font-weight: 400;
+        transform: translateY(-50%);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 400;
+    color: currentcolor;
+    text-decoration: none;
     opacity: 0.8;
     transition: opacity 300ms ease-in-out;
 
