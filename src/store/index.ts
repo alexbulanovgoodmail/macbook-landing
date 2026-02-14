@@ -1,6 +1,14 @@
 import { create } from 'zustand'
 
-const useMacbookStore = create(set => ({
+type MacbookState = {
+  color: string
+  scale: number
+  texture: string
+  setColor: (color: string) => void
+  setScale: (scale: number) => void
+}
+
+const useMacbookStore = create<MacbookState>(set => ({
   color: '#2e2c2e',
   setColor: (color: string) => set({ color }),
 
