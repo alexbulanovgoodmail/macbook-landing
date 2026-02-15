@@ -1,10 +1,14 @@
 import type { FC } from 'react'
 import useMacbookStore from '~/store'
 import { Canvas } from '@react-three/fiber'
-import { Box, OrbitControls } from '@react-three/drei'
+import { StudioLights } from './three/StudioLights'
+import { ModelSwitcher } from './three/ModelSwitcher'
+import { useMediaQuery } from 'react-responsive'
 
 export const ProductViewer: FC = () => {
   const { color, scale, setColor, setScale } = useMacbookStore()
+
+  const isMobile = useMediaQuery({ query: '(max-width: 1024)' })
 
   return (
     <section className='product-viewer'>
@@ -54,9 +58,8 @@ export const ProductViewer: FC = () => {
 
           <div className='product-viewer__canvas'>
             <Canvas id='canvas' camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }}>
-              <Box material-color={color} />
-
-              <OrbitControls enableZoom={false} />
+              <StudioLights />
+              <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile} />
             </Canvas>
           </div>
         </div>
