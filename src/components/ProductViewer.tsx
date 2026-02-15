@@ -1,5 +1,7 @@
 import type { FC } from 'react'
 import useMacbookStore from '~/store'
+import { Canvas } from '@react-three/fiber'
+import { Box, OrbitControls } from '@react-three/drei'
 
 export const ProductViewer: FC = () => {
   const { color, scale, setColor, setScale } = useMacbookStore()
@@ -51,7 +53,11 @@ export const ProductViewer: FC = () => {
           </div>
 
           <div className='product-viewer__canvas'>
-            <div id='canvas'>Canvas is here</div>
+            <Canvas id='canvas' camera={{ position: [0, 2, 5], fov: 50, near: 0.1, far: 100 }}>
+              <Box material-color={color} />
+
+              <OrbitControls enableZoom={false} />
+            </Canvas>
           </div>
         </div>
       </div>
