@@ -9,12 +9,13 @@ Title: macbook pro M3 16 inch 2024
 */
 
 import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, useTexture } from '@react-three/drei'
+import { SRGBColorSpace } from 'three'
 
 export default function MacbookModel16(props) {
   const { nodes, materials } = useGLTF('/models/macbook-16-transformed.glb')
 
-  const texture = useTexture('/screen.png')
+  const texture = useTexture('/images/screen.png')
   texture.colorSpace = SRGBColorSpace
   texture.needsUpdate = true
 
