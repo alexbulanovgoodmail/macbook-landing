@@ -583,3 +583,133 @@ main {
     margin-bottom: 56px;
   }
 }
+
+.home-performance {
+  padding-top: 80px;
+
+  &__title {
+    margin: 0 auto;
+    max-width: $sm;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+
+    @media screen and (min-width: $xxl) {
+      font-size: 60px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: 96px;
+    position: relative;
+    height: 50dvh;
+
+    @media screen and (min-width: $lg) {
+      height: 100dvh;
+    }
+  }
+
+  &__img {
+    max-width: 160px;
+
+    @media screen and (min-width: $lg) {
+      max-width: 432px;
+    }
+
+    @media screen and (min-width: $xxl) {
+      max-width: 560px;
+    }
+  }
+
+  &__img.p1 {
+    position: absolute;
+    bottom: 50%;
+    left: 3%;
+    z-index: 1;
+
+    @media screen and (min-width: $sm) {
+      left: 23%;
+    }
+  }
+
+  &__img.p2 {
+    position: absolute;
+    bottom: 40%;
+    right: 7%;
+    z-index: 3;
+
+    @media screen and (min-width: $sm) {
+      right: 17%;
+    }
+  }
+
+  &__img.p3 {
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    z-index: 2;
+
+    @media screen and (min-width: $sm) {
+      right: 15%;
+    }
+  }
+
+  &__img.p4 {
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+    z-index: 1;
+
+    @media screen and (min-width: $sm) {
+      right: 10%;
+    }
+  }
+
+  &__img.p5 {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%) scale(150%);
+  }
+
+  &__img.p6 {
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+    z-index: 2;
+
+    @media screen and (min-width: $sm) {
+      left: 25%;
+    }
+  }
+
+  &__img.p7 {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 3;
+
+    @media screen and (min-width: $sm) {
+      left: 15%;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 576px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--color-dark-100);
+    text-align: center;
+
+    p {
+      opacity: 0;
+    }
+
+    span {
+      color: var(--color-white);
+    }
+  }
+}
