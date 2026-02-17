@@ -4,10 +4,10 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 export const HomeShowcase: FC = () => {
-  const isDesktop = useMediaQuery({ query: '(max-width: 1024px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
   useGSAP(() => {
-    if (!isDesktop) {
+    if (!isMobile) {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: '#home-showcase',
@@ -24,7 +24,7 @@ export const HomeShowcase: FC = () => {
         })
         .to('#home-showcase-content', { opacity: 1, y: 0, ease: 'power1.in' })
     }
-  }, [isDesktop])
+  }, [isMobile])
 
   return (
     <section id='home-showcase' className='home-showcase'>
