@@ -5,6 +5,7 @@ import { HeaderRoot } from './components/HeaderRoot'
 import { HomeHero } from './components/HomeHero'
 import { ProductViewer } from './components/ProductViewer'
 import { HomeShowcase } from './components/HomeShowcase'
+import { HomePerformance } from './components/HomePerformance'
 import { FooterRoot } from './components/FooterRoot'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -17,6 +18,7 @@ function App() {
         <HomeHero />
         <ProductViewer />
         <HomeShowcase />
+        <HomePerformance />
       </main>
       <FooterRoot />
     </>
