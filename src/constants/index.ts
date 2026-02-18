@@ -81,3 +81,44 @@ export const performanceImgPositions = [
     bottom: 0,
   },
 ]
+
+export const features = [
+  {
+    id: 1,
+    icon: '/images/feature-icon1.svg',
+    highlight: 'Email AI.',
+    text: 'Summarize and draft replies to emails instantly, so you stay on top of your inbox.',
+  },
+  {
+    id: 2,
+    icon: '/images/feature-icon2.svg',
+    highlight: 'Image AI.',
+    text: 'Generate or edit images with ease. Just type what you imagine, and let AI bring it to life.',
+  },
+  {
+    id: 3,
+    icon: '/images/feature-icon3.svg',
+    highlight: 'Summarize AI.',
+    text: 'Turn long articles, reports, or notes into clear, bite-sized summaries in seconds.',
+  },
+  {
+    id: 4,
+    icon: '/images/feature-icon4.svg',
+    highlight: 'AirDrop.',
+    text: 'Wirelessly share photos, large files, and more between your iPhone, your Mac, & other devices.',
+  },
+  {
+    id: 5,
+    icon: '/images/feature-icon5.svg',
+    highlight: 'Writing Tool.',
+    text: 'Write smarter and faster, whether it’s blogs, essays, or captions, AI helps polish your words.',
+  },
+]
+
+export const featureSequence = [
+  { videoPath: '/videos/feature-1.mp4', boxClass: '.box1', delay: 1 },
+  { videoPath: '/videos/feature-2.mp4', boxClass: '.box2', delay: 0 },
+  { videoPath: '/videos/feature-3.mp4', boxClass: '.box3', delay: 0 },
+  { videoPath: '/videos/feature-4.mp4', boxClass: '.box4', delay: 0 },
+  { videoPath: '/videos/feature-5.mp4', boxClass: '.box5', delay: 0 },
+]
