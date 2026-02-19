@@ -13,8 +13,9 @@ import { useEffect } from 'react'
 import { Color } from 'three'
 import { useGLTF, useVideoTexture } from '@react-three/drei'
 import useMacbookStore from '~/store'
+import { noChangeParts } from '~/constants/index.js'
 
-export function MacbookModel(props) {
+export default function MacbookModel(props) {
   const { color, texture } = useMacbookStore()
 
   const { nodes, materials, scene } = useGLTF('/models/macbook-transformed.glb')
