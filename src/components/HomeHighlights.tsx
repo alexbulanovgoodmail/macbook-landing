@@ -16,7 +16,7 @@ export const HomeHighlights: FC = () => {
       {
         scrollTrigger: {
           trigger: '#home-highlights',
-          start: isMobile ? 'bottom bottom' : 'top center',
+          start: isMobile ? 'bottom bottom' : 'bottom center',
         },
         y: 0,
         opacity: 1,
