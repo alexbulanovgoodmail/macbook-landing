@@ -6,6 +6,8 @@ type MacbookState = {
   texture: string
   setColor: (color: string) => void
   setScale: (scale: number) => void
+  setTexture: (texture: string) => void
+  reset: () => void
 }
 
 const useMacbookStore = create<MacbookState>(set => ({
