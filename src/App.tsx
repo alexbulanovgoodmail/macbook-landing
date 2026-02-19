@@ -6,6 +6,7 @@ import { HomeHero } from './components/HomeHero'
 import { ProductViewer } from './components/ProductViewer'
 import { HomeShowcase } from './components/HomeShowcase'
 import { HomePerformance } from './components/HomePerformance'
+import { HomeFeatures } from './components/HomeFeatures'
 import { HomeHighlights } from './components/HomeHighlights'
 import { FooterRoot } from './components/FooterRoot'
 
@@ -20,6 +21,7 @@ function App() {
         <ProductViewer />
         <HomeShowcase />
         <HomePerformance />
+        <HomeFeatures />
         <HomeHighlights />
       </main>
       <FooterRoot />
